@@ -9,6 +9,7 @@ public class Order {
     private String buyer;
     private double price;
 
+    public Order() {}
 
     public String getId() {
         return id;

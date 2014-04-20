@@ -3,7 +3,6 @@ import org.jongo.marshall.jackson.oid.ObjectId;
 
 public class Order {
 
-    @ObjectId
     @Id
     private String id;
     private String buyer;

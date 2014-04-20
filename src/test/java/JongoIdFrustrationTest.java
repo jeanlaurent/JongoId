@@ -30,10 +30,11 @@ public class JongoIdFrustrationTest {
         assertThat(order.getId()).isNotNull();
         // I change something in the order
         order.setBuyer("bar");
-        // Second I save the same order (this should be an "update")
+        // Second I save the same order
         orders.save(order);
         assertThat(order.getId()).isEqualTo(id);
         assertThat(order.getBuyer()).isEqualTo("bar");
+        // this should fails with The _id field cannot be changed from {_id: ObjectId('535383a630049dea914bd068')} to {_id: \"535383a630049dea914bd068\"}
     }
 
 }
